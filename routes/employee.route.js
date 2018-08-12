@@ -12,13 +12,7 @@ module.exports = (app) => {
     // Create a new employee
     app.post('/employee', employee.create);
 
-    // Retrieve all employee
-    app.get('/employee', employee.findAll);
-
-    // Retrieve a single employee with employeeId
-    app.get('/employee/:employeeId', employee.findOne);
-
-    // Update a employee with employeeId
+      // Update a employee with employeeId
     app.put('/employee/:employeeId', employee.update);
 
     // Delete a employee with employeeId
