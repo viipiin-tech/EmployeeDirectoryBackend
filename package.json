@@ -2,13 +2,8 @@
   "name": "employee-directory-backend",
   "version": "0.0.0",
   "main": "server.js",
-  "scripts": {
-    "ng": "ng",
-    "start": "node server.js",
-    "build": "ng build",
-    "test": "ng test",
-    "lint": "ng lint",
-    "e2e": "ng e2e"
+ "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "private": true,
   "dependencies": {
