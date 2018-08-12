@@ -30,8 +30,8 @@ mongoose.connect(dbConfig.url)
         process.exit();
     });
 
-var Employee = require('./models/employee.model');
-var func = require('./routes/employee.route');
+var Employee = require('./models/employee.model.js');
+var func = require('./routes/employee.route.js');
 func(app);
 
 
