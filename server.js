@@ -30,7 +30,7 @@ mongoose.connect(dbConfig.url)
         process.exit();
     });
 
-
+var Employee = require('./models/employee.model');
 
 
 
