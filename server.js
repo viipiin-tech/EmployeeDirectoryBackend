@@ -31,6 +31,8 @@ mongoose.connect(dbConfig.url)
     });
 
 var Employee = require('./models/employee.model');
+var func = require('./routes/employee.route.js');
+func(app);
 
 
 
