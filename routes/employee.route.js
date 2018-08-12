@@ -24,3 +24,4 @@ module.exports = (app) => {
     // Delete a employee with employeeId
     app.delete('/employee/:employeeId', employee.delete);
 }
+

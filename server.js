@@ -31,7 +31,7 @@ mongoose.connect(dbConfig.url)
     });
 
 
-require('./routes/employee.route.js')(app);
+
 
 
 // listen for requests
