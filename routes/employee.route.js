@@ -10,7 +10,7 @@ module.exports = (app) => {
     });
 
     app.post('/add', employee.create);
-    app.post('/employee', employee.findAll);
+    app.get('/employee', employee.findAll);
 
  // Update a employee with employeeId
  app.put('/update/:employeeId', employee.update);
