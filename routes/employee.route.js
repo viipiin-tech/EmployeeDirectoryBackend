@@ -9,13 +9,12 @@ module.exports = (app) => {
         next();
     });
 
-    // Create a new employee
-    app.post('/employee', employee.create);
+    app.post('/add', employee.create);
 
-      // Update a employee with employeeId
-    app.put('/employee/:employeeId', employee.update);
+ // Update a employee with employeeId
+ app.put('/update/:employeeId', employee.update);
 
-    // Delete a employee with employeeId
-    app.delete('/employee/:employeeId', employee.delete);
+ // Delete a employee with employeeId
+ app.delete('/delete/:employeeId', employee.delete);
 }
 

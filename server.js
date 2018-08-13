@@ -1,7 +1,7 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 var cors = require('cors');
-
+const employee = require('./controllers/employee.controller');
 
 // create express app
 const app = express();
@@ -22,7 +22,7 @@ const mongoose = require('mongoose');
 mongoose.Promise = global.Promise;
 
 // Connecting to the database
-mongoose.connect(dbConfig.url)
+mongoose.connect(dbConfig.url,  { useNewUrlParser: true })
     .then(() => {
         console.log("Successfully connected to the database");
     }).catch(err => {
@@ -30,13 +30,10 @@ mongoose.connect(dbConfig.url)
         process.exit();
     });
 
-var Employee = require('./models/employee.model.js');
-var func = require('./routes/employee.route.js');
-func(app);
-
-
 
 // listen for requests
 app.listen(process.env.PORT || 3000, () => {
     console.log("Server is listening on port 3000");
 });
+
+require('./routes/employee.route.js')(app);

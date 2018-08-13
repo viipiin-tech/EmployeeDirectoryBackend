@@ -5,6 +5,7 @@ const mongoose = require('mongoose');
 // Create and Save a new employee
 exports.create = (req, res) => {
     // Validate request
+	console.log("Create request recieved");
 
     if (!req.body) {
         return res.status(400).send({
@@ -22,6 +23,12 @@ exports.create = (req, res) => {
         department: req.body.department,
         age: req.body.age
     });
+    console.log(req.body.name);
+    console.log(employeeModel.name);
+    console.log(employeeModel.gender);
+    console.log(employeeModel.dob);
+    console.log(employeeModel.email);
+    console.log(employeeModel.department);
 
     // Save employee in the database
     employeeModel.save()
