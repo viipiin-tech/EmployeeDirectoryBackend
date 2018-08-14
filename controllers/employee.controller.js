@@ -15,7 +15,7 @@ exports.create = (req, res) => {
 
     // Create a employee
     const employeeModel = new employee({
-        _id: mongoose.Types.ObjectId(),
+        _id: req.body._id,
         name: req.body.name,
         gender: req.body.gender,
         dob: req.body.dob,
@@ -48,7 +48,7 @@ exports.findAll = (req, res) => {
  
 	employee.find()
      .then(employees => {
-         res.send(employees);
+         res.send(Object.keys(employees).map(e=>employees[e]));
      }).catch(err => {
          res.status(500).send({
              message: err.message || "Some error occurred while retrieving employees."
