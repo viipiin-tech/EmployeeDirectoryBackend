@@ -78,7 +78,7 @@ exports.update = (req, res) => {
 		age : req.body.age
 	}, {
 		upsert : true,
-		returnOriginal:false
+		new : true
 	})
 		.then(employee => {
 			if (!employee) {
