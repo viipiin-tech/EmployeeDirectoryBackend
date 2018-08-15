@@ -15,7 +15,7 @@ exports.create = (req, res) => {
 
 	// Create a employee
 	const employeeModel = new employee({
-		_id : req.body._id,
+		_id : mongoose.Types.ObjectId(),
 		name : req.body.name,
 		gender : req.body.gender,
 		dob : req.body.dob,
