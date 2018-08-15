@@ -8,6 +8,8 @@ const EmployeeSchema = mongoose.Schema({
 	department : String,
 	gender : String,
 	age : String
+},{
+    versionKey: false // You should be aware of the outcome after set to false
 });
 
 module.exports = mongoose.model('Employee', EmployeeSchema);
