@@ -103,7 +103,7 @@ exports.update = (req, res) => {
 
 // Delete a employee with the specified employeeId in the request
 exports.delete = (req, res) => {
-  
+  console.log(req.params.employeeId);
     employee.findByIdAndRemove(req.params.employeeId)
         .then(employee => {
             if (!employee) {
